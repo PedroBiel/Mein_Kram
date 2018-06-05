@@ -2,7 +2,7 @@
 """
 Created on Wed May 23 09:24:15 2018
 
-@author: pc175
+@author: P. Biel
 """
 
 from PyQt4.QtGui import QMessageBox
