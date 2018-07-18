@@ -1,0 +1,11 @@
+QTableWidget                     1 fila
+Height                           25 + 30 = 55
+verticalHeaderDefaultSectionSize 30
+
+QTableWidget                     2 filas
+Height                           25 + 60 = 85
+verticalHeaderDefaultSectionSize 30
+
+QTableWidget                     3 filas
+Height                           25 + 90 = 115
+verticalHeaderDefaultSectionSize 30
