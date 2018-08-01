@@ -1,0 +1,1098 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>838</width>
+    <height>467</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Hades beta</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_5">
+    <item row="0" column="0">
+     <widget class="QTabWidget" name="tabWidget_hades">
+      <property name="statusTip">
+       <string/>
+      </property>
+      <property name="currentIndex">
+       <number>3</number>
+      </property>
+      <widget class="QWidget" name="tab">
+       <attribute name="title">
+        <string>Archivos csv</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_2">
+        <item row="0" column="0">
+         <layout class="QGridLayout" name="gridLayout">
+          <item row="0" column="0">
+           <layout class="QHBoxLayout" name="horizontalLayout">
+            <item>
+             <widget class="QPushButton" name="pushButton_importar_ruta">
+              <property name="statusTip">
+               <string>Busca la ruta donde se encuentran los archivos csv con las reacciones de Robot.</string>
+              </property>
+              <property name="text">
+               <string>Importar ruta donde se encuentran los archivos csv con las reacciones:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="lineEdit_ruta">
+              <property name="statusTip">
+               <string>Ruta donde se encuentran los archivos csv con las reacciones de Robot.</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item row="1" column="0">
+           <layout class="QHBoxLayout" name="horizontalLayout_2">
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout">
+              <item>
+               <widget class="QLabel" name="label_archivos_ruta">
+                <property name="text">
+                 <string>Lista de archivos csv en ruta:</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QListWidget" name="listWidget_archivos_ruta">
+                <property name="statusTip">
+                 <string>Lista de archivos csv en ruta seleccionada.</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_3">
+              <item>
+               <spacer name="verticalSpacer_2">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>28</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <widget class="QPushButton" name="pushButton_selecciona_csv">
+                <property name="statusTip">
+                 <string>Selecciona los archivos de csv para las implantaciones.</string>
+                </property>
+                <property name="text">
+                 <string>&gt;</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="pushButton_selecciona_todos_csv">
+                <property name="statusTip">
+                 <string>Selecciona todos los archivos de csv para las implantaciones</string>
+                </property>
+                <property name="text">
+                 <string>&gt;&gt;</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="verticalSpacer">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>40</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <widget class="QPushButton" name="pushButton_deselecciona_csv">
+                <property name="statusTip">
+                 <string>Elimina de la selección los archivos de csv para las implantaciones</string>
+                </property>
+                <property name="text">
+                 <string>&lt;</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="pushButton_deselecciona_todos_csv">
+                <property name="statusTip">
+                 <string>Elimina de la selección todos los archivos de csv para las implantaciones</string>
+                </property>
+                <property name="text">
+                 <string>&lt;&lt;</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="verticalSpacer_3">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>48</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_2">
+              <item>
+               <widget class="QLabel" name="label_archivos_seleccion">
+                <property name="text">
+                 <string>Lista de archivos csv para implantaciones:</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QListWidget" name="listWidget_archivos_implantacion">
+                <property name="statusTip">
+                 <string>Lista de archivos csv seleccionados para implantaciones.</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_2">
+       <attribute name="title">
+        <string>Casos de carga</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_4">
+        <item row="0" column="2">
+         <layout class="QVBoxLayout" name="verticalLayout_6">
+          <item>
+           <widget class="QLabel" name="label_nuevo_grupo">
+            <property name="text">
+             <string>Nuevo grupo de casos de carga:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_3">
+            <item>
+             <widget class="QLineEdit" name="lineEdit_nuevo_grupo">
+              <property name="statusTip">
+               <string>Nuevo grupo de casos de carga.</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButton_crear_nuevo_grupo">
+              <property name="statusTip">
+               <string>Crea un nuevo grupo de casos de carga.</string>
+              </property>
+              <property name="text">
+               <string>Crear</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item row="1" column="0">
+         <layout class="QVBoxLayout" name="verticalLayout_4">
+          <item>
+           <widget class="QLabel" name="label_casos_carga">
+            <property name="text">
+             <string>Casos de carga en archivos csv:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QListWidget" name="listWidget_casos_carga">
+            <property name="statusTip">
+             <string>Lista con los casos de carga en los modelos de Robot.</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="1" column="1">
+         <layout class="QVBoxLayout" name="verticalLayout_13">
+          <item>
+           <widget class="QGroupBox" name="groupBox_relacion">
+            <property name="title">
+             <string>Relación:</string>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_9">
+             <item>
+              <widget class="QRadioButton" name="radioButton_Y">
+               <property name="toolTip">
+                <string>Todos los casos de carga seleccionados serán sumados. Por ejemplo, cargas permanentes.</string>
+               </property>
+               <property name="statusTip">
+                <string>Suma los valores de los casos de carga seleccionados.</string>
+               </property>
+               <property name="whatsThis">
+                <string/>
+               </property>
+               <property name="text">
+                <string>Y (+)</string>
+               </property>
+               <property name="checked">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QRadioButton" name="radioButton_YO">
+               <property name="toolTip">
+                <string>De los casos de carga seleccionados se extraerán los valores máximos y mínimos de entre todos o de su combinación. Por ejemplo, sobrecargas.</string>
+               </property>
+               <property name="statusTip">
+                <string>Valor máximo y mínimo de entre los valores de los casos de carga seleccionados o de su suma.</string>
+               </property>
+               <property name="text">
+                <string>Y/O (¤)</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QRadioButton" name="radioButton_O">
+               <property name="toolTip">
+                <string>De los casos de carga seleccionados se extraerán los valores máximos y mínimos de entre todos. Por ejemplo, viento y sismo.</string>
+               </property>
+               <property name="statusTip">
+                <string>Valor máximo y mínimo de entre los valores de los casos de carga seleccionados.</string>
+               </property>
+               <property name="text">
+                <string>O (o)</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_8">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>13</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_selecciona_cc">
+            <property name="statusTip">
+             <string>Selecciona los casos de carga para las implantaciones.</string>
+            </property>
+            <property name="text">
+             <string>&gt;</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_selecciona_todos_cc">
+            <property name="statusTip">
+             <string>Selecciona todos los casos de carga para las implantaciones.</string>
+            </property>
+            <property name="text">
+             <string>&gt;&gt;</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_9">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>13</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_deselecciona_cc">
+            <property name="statusTip">
+             <string>Elimina de la selección los casos de carga para las implantaciones.</string>
+            </property>
+            <property name="text">
+             <string>&lt;</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_deselecciona_todos_cc">
+            <property name="statusTip">
+             <string>Elimina de la selección todos los grupos de casos de carga para las implantaciones.</string>
+            </property>
+            <property name="text">
+             <string>&lt;&lt;</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_10">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>38</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+        <item row="1" column="2">
+         <layout class="QVBoxLayout" name="verticalLayout_5">
+          <item>
+           <widget class="QLabel" name="label_casos_carga_grupo">
+            <property name="text">
+             <string>Casos de carga en grupo:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QListWidget" name="listWidget_casos_carga_grupo">
+            <property name="statusTip">
+             <string>Lista con los casos de carga en el grupo.</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="1" column="3">
+         <layout class="QVBoxLayout" name="verticalLayout_10">
+          <item>
+           <spacer name="verticalSpacer_4">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>158</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_deselecciona_grp">
+            <property name="statusTip">
+             <string>Elimina de la selección los grupos de casos de carga para las implantaciones.</string>
+            </property>
+            <property name="text">
+             <string>&lt; &lt;</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_deselecciona_todos_grp">
+            <property name="statusTip">
+             <string>Elimina de la selección todos los casos de carga para las implantaciones.</string>
+            </property>
+            <property name="text">
+             <string>&lt;&lt; &lt;&lt;</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_7">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>118</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+        <item row="1" column="4">
+         <layout class="QVBoxLayout" name="verticalLayout_8">
+          <item>
+           <widget class="QLabel" name="label_grupos_casos_carga">
+            <property name="text">
+             <string>Grupos de casos de carga:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QListWidget" name="listWidget_grupos_casos_carga">
+            <property name="toolTip">
+             <string>Arrastrar grupos para ordenar.</string>
+            </property>
+            <property name="statusTip">
+             <string>Grupos de casos de carga.</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_3">
+       <attribute name="title">
+        <string>Apoyos</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_3">
+        <item row="0" column="0">
+         <layout class="QGridLayout" name="gridLayout_6">
+          <item row="0" column="0">
+           <layout class="QVBoxLayout" name="verticalLayout_7">
+            <item>
+             <widget class="QLabel" name="label_nudos_apoyo">
+              <property name="text">
+               <string>Nudos con apoyo en archivos csv:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QListWidget" name="listWidget_nudos_apoyo">
+              <property name="statusTip">
+               <string>Lista con los nudos en los modelos de Robot.</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item row="0" column="1">
+           <layout class="QVBoxLayout" name="verticalLayout_12">
+            <item>
+             <spacer name="verticalSpacer_11">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>18</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButton_nudos">
+              <property name="statusTip">
+               <string>Selecciona el(los) nudo(s) para el apoyo.</string>
+              </property>
+              <property name="text">
+               <string>&gt; Seleccionar nudo(s)</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButton_deseleccionar_nudos">
+              <property name="text">
+               <string>&lt; Deseleccionar nudo(s)</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_nudos">
+              <property name="text">
+               <string>Nudo(s) seleccionado(s):</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="lineEdit_nudos">
+              <property name="statusTip">
+               <string>Nudo(s) seleccionado(s) para el apoyo.</string>
+              </property>
+              <property name="readOnly">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_apoyo">
+              <property name="text">
+               <string>Nombre del apoyo:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="lineEdit_apoyo">
+              <property name="statusTip">
+               <string>Nombre del apoyo para cuadro de implantación.</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButton_apoyo">
+              <property name="statusTip">
+               <string>Crea apoyo para el cuadro de implantación.</string>
+              </property>
+              <property name="text">
+               <string>Crear apoyo &gt;</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="verticalSpacer_5">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>40</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButton_deselecciona_apy">
+              <property name="statusTip">
+               <string>Elimina de la selección los apoyos para el cuadro de implantación.</string>
+              </property>
+              <property name="text">
+               <string>&lt;</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButton_deselecciona_todos_apy">
+              <property name="statusTip">
+               <string>Elimina de la selección todos los apoyos para el cuadro de implantación.</string>
+              </property>
+              <property name="text">
+               <string>&lt;&lt;</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="verticalSpacer_6">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>40</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </item>
+          <item row="0" column="2">
+           <layout class="QVBoxLayout" name="verticalLayout_11">
+            <item>
+             <widget class="QLabel" name="label_apoyos_implantacion">
+              <property name="text">
+               <string>Apoyos para cuadro de implantación:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QListWidget" name="listWidget_apoyos_implantacion">
+              <property name="statusTip">
+               <string>Lista con los apoyos para el cuadro de implantación.</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_7">
+       <attribute name="title">
+        <string>Nº de puntos</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_8">
+        <item row="0" column="0">
+         <layout class="QGridLayout" name="gridLayout_7">
+          <item row="0" column="0">
+           <layout class="QVBoxLayout" name="verticalLayout_14">
+            <item>
+             <widget class="QLabel" name="label_apoyos">
+              <property name="text">
+               <string>Apoyos:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QListWidget" name="listWidget_apoyos">
+              <property name="statusTip">
+               <string>Lista con los apoyos para implantación.</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item row="0" column="1">
+           <layout class="QVBoxLayout" name="verticalLayout_15">
+            <item>
+             <spacer name="verticalSpacer_12">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>18</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButton_apoyos">
+              <property name="statusTip">
+               <string>Selecciona el(los) apoyo(s) para asignar el nº de puntos.</string>
+              </property>
+              <property name="text">
+               <string>&gt; Seleccionar apoyo(s)</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButton_deseleccionar_apoyos">
+              <property name="text">
+               <string>&lt; Deseleccionar apoyo(s)</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_apoyos_seleccionados">
+              <property name="text">
+               <string>Apoyo(s) seleccionado(s):</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="lineEdit_apoyos_seleccionados">
+              <property name="statusTip">
+               <string>Apoyo(s) seleccionado(s) para asignar el nº de puntos.</string>
+              </property>
+              <property name="readOnly">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_n_puntos_apoyo">
+              <property name="text">
+               <string>Nº de puntos por apoyo:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="lineEdit_puntos_apoyo">
+              <property name="statusTip">
+               <string>Nº de puntos a asignar al(os) apoyo(s).</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButton_puntos">
+              <property name="statusTip">
+               <string>Asigna el nº de puntos al(os) apoyo(s) para el cuadro de implantación.</string>
+              </property>
+              <property name="text">
+               <string>Asignar puntos por apoyo &gt;</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="verticalSpacer_13">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>40</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButton_deselecciona_pto">
+              <property name="statusTip">
+               <string>Elimina de la selección el nº de puntos por apoyo para el cuadro de implantación.</string>
+              </property>
+              <property name="text">
+               <string>&lt;</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButton_deselecciona_todos_pto">
+              <property name="statusTip">
+               <string>Elimina de la selección todos los nº de puntos por apoyo para el cuadro de implantación.</string>
+              </property>
+              <property name="text">
+               <string>&lt;&lt;</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="verticalSpacer_14">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>40</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </item>
+          <item row="0" column="2">
+           <layout class="QVBoxLayout" name="verticalLayout_16">
+            <item>
+             <widget class="QLabel" name="label_puntos_apoyo">
+              <property name="text">
+               <string>Puntos por apoyo:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QListWidget" name="listWidget_puntos_apoyo">
+              <property name="statusTip">
+               <string>Lista con los apoyos para el cuadro de implantación.</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_4">
+       <attribute name="title">
+        <string>Implantaciones</string>
+       </attribute>
+       <widget class="QPushButton" name="pushButton_reacciones_rsa">
+        <property name="geometry">
+         <rect>
+          <x>650</x>
+          <y>20</y>
+          <width>151</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="statusTip">
+         <string>Muestra las reacciones de Robot.</string>
+        </property>
+        <property name="text">
+         <string>Reacciones RSA</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_reacciones_implantacion">
+        <property name="geometry">
+         <rect>
+          <x>650</x>
+          <y>50</y>
+          <width>151</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="statusTip">
+         <string>Muestra las reacciones de la implantación.</string>
+        </property>
+        <property name="text">
+         <string>Reacciones Implantación</string>
+        </property>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_coeficiente_implantacion">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>20</y>
+          <width>611</width>
+          <height>271</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>Coeficientes de implantación</string>
+        </property>
+        <widget class="QComboBox" name="comboBox_coeficiente_implantacion">
+         <property name="geometry">
+          <rect>
+           <x>240</x>
+           <y>50</y>
+           <width>131</width>
+           <height>22</height>
+          </rect>
+         </property>
+         <property name="statusTip">
+          <string>Coeficiente de implantación.</string>
+         </property>
+         <property name="editable">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_coeficiente_implantacion">
+         <property name="geometry">
+          <rect>
+           <x>240</x>
+           <y>30</y>
+           <width>151</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Coeficiente de implantación:</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_grupos_implantacion">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>30</y>
+           <width>181</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Grupos para cuadro de implantación:</string>
+         </property>
+        </widget>
+        <widget class="QListWidget" name="listWidget_grupos_implantacion">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>50</y>
+           <width>201</width>
+           <height>192</height>
+          </rect>
+         </property>
+         <property name="statusTip">
+          <string>Grupos para el cuadro de implantación.</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_coeficientes_implantacion">
+         <property name="geometry">
+          <rect>
+           <x>390</x>
+           <y>30</y>
+           <width>211</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Coeficientes para cuadro de implantación:</string>
+         </property>
+        </widget>
+        <widget class="QListWidget" name="listWidget_coeficientes_implantacion">
+         <property name="geometry">
+          <rect>
+           <x>390</x>
+           <y>50</y>
+           <width>201</width>
+           <height>192</height>
+          </rect>
+         </property>
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;En el cuadro de implantación los grupos de cargas aparecerán con el orden mostrado en esta lista.&lt;/p&gt;&lt;p&gt;Para modificar el orden presionar sobre el grupo de cargas y arrastrar a la posición deseada.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="statusTip">
+          <string>Coeficientes para el cuadro de implantación.</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton_selecciona_grp_coef">
+         <property name="geometry">
+          <rect>
+           <x>240</x>
+           <y>100</y>
+           <width>75</width>
+           <height>23</height>
+          </rect>
+         </property>
+         <property name="statusTip">
+          <string>Aplica el coeficiente al(os) grupo(s) seleccionado(s).</string>
+         </property>
+         <property name="text">
+          <string>&gt;</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton_selecciona_todos_grp_coef">
+         <property name="geometry">
+          <rect>
+           <x>240</x>
+           <y>130</y>
+           <width>75</width>
+           <height>23</height>
+          </rect>
+         </property>
+         <property name="statusTip">
+          <string>Aplica el coeficiente a todos los grupos.</string>
+         </property>
+         <property name="text">
+          <string>&gt;&gt;</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton_deselecciona_grp_coef">
+         <property name="geometry">
+          <rect>
+           <x>240</x>
+           <y>190</y>
+           <width>75</width>
+           <height>23</height>
+          </rect>
+         </property>
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="statusTip">
+          <string>Elimina el coeficiente de (los) grupo(s) seleccionado(s).</string>
+         </property>
+         <property name="text">
+          <string>&lt;</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton_deselecciona_todos_grp_coef">
+         <property name="geometry">
+          <rect>
+           <x>240</x>
+           <y>220</y>
+           <width>75</width>
+           <height>23</height>
+          </rect>
+         </property>
+         <property name="statusTip">
+          <string>Elimina todos los coeficientes de todos los grupos.</string>
+         </property>
+         <property name="text">
+          <string>&lt;&lt;</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QPushButton" name="pushButton_cuadro_implantacion">
+        <property name="geometry">
+         <rect>
+          <x>650</x>
+          <y>80</y>
+          <width>151</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="statusTip">
+         <string>Vuelca los resultados a una tabla Excel.</string>
+        </property>
+        <property name="text">
+         <string>Cuadro de Implantación</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_6">
+       <attribute name="title">
+        <string>Page</string>
+       </attribute>
+      </widget>
+      <widget class="QWidget" name="tab_5">
+       <attribute name="title">
+        <string>Page</string>
+       </attribute>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>838</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuArchivo">
+    <property name="title">
+     <string>Archivo</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuProyecto">
+    <property name="title">
+     <string>Proyecto</string>
+    </property>
+    <addaction name="actionDatos_de_proyecto"/>
+   </widget>
+   <widget class="QMenu" name="menuImplantaci_n">
+    <property name="title">
+     <string>Implantación</string>
+    </property>
+    <addaction name="actionPropiedades"/>
+   </widget>
+   <addaction name="menuArchivo"/>
+   <addaction name="menuProyecto"/>
+   <addaction name="menuImplantaci_n"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionDatos_de_proyecto">
+   <property name="icon">
+    <iconset>
+     <normaloff>../iconos/Programming Edit Property.png</normaloff>../iconos/Programming Edit Property.png</iconset>
+   </property>
+   <property name="text">
+    <string>Datos de proyecto</string>
+   </property>
+  </action>
+  <action name="actionPropiedades">
+   <property name="text">
+    <string>Propiedades</string>
+   </property>
+  </action>
+ </widget>
+ <tabstops>
+  <tabstop>pushButton_importar_ruta</tabstop>
+  <tabstop>lineEdit_ruta</tabstop>
+  <tabstop>listWidget_archivos_ruta</tabstop>
+  <tabstop>pushButton_selecciona_csv</tabstop>
+  <tabstop>pushButton_selecciona_todos_csv</tabstop>
+  <tabstop>listWidget_archivos_implantacion</tabstop>
+  <tabstop>pushButton_deselecciona_csv</tabstop>
+  <tabstop>pushButton_deselecciona_todos_csv</tabstop>
+  <tabstop>lineEdit_nuevo_grupo</tabstop>
+  <tabstop>pushButton_crear_nuevo_grupo</tabstop>
+  <tabstop>listWidget_casos_carga</tabstop>
+  <tabstop>pushButton_selecciona_todos_cc</tabstop>
+  <tabstop>pushButton_selecciona_cc</tabstop>
+  <tabstop>listWidget_casos_carga_grupo</tabstop>
+  <tabstop>listWidget_nudos_apoyo</tabstop>
+  <tabstop>lineEdit_nudos</tabstop>
+  <tabstop>lineEdit_apoyo</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>
