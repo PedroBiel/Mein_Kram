@@ -132,64 +132,7 @@ def playGame(wordList):
     
     while True:
         
-        # # Asks the user to input 'n' or 'r' or 'e'.
-        # print('Enter n to deal a new hand, r to replay the last hand, or e to end game: ', end='')
-        # x = input()
-        
-        # # If the user inputs 'e', end the game.
-        # if x == 'e':
-        #     break
-        
-        # # If the user inputs 'r', replay the last hand (if possible).
-        # elif x == 'r':
-        #     if count_games > 0:
-        #         # playHand(hand_previous, wordList, HAND_SIZE)
-        #         continue
-
-        #     else:
-        #         print('You have not played a hand yet. Please play a new hand first!\n')
-        #         print('Enter n to deal a new hand, r to replay the last hand, or e to end game: ', end='')
-        #         x = input()
-                
-        # # The user doesn't input the right input.
-        # else:
-        #     print('Invalid command.')
-        
-        # # If the user inputs 'n', let the user or computer play a new (random) hand.
-        # while True:
-            
-        #     print()
-        #     print('Enter u to have yourself play, c to have the computer play: ', end='')
-        #     y = input()
-            
-        #     # The user doesn't input the right input.
-        #     if (y != 'u') and (y != 'c'):
-        #         print('Invalid command.')
-            
-        #     # If the user input 'u', let the user play a new (random) hand.
-        #     if y == 'u':
-        #         count_games += 1
-        #         if x == 'r':
-        #             hand = hand_previous
-        #         else: 
-        #             hand = dealHand(HAND_SIZE)
-        #         playHand(hand, wordList, HAND_SIZE)
-        #         hand_previous = hand
-        #         break
-                
-        #     # If the user input 'c', let the computer play a new (random) hand.
-        #     elif y == 'c':
-        #         count_games += 1
-        #         if x == 'r':
-        #             hand = hand_previous
-        #         else: 
-        #             hand = dealHand(HAND_SIZE)
-        #         compPlayHand(hand, wordList, HAND_SIZE)
-        #         hand_previous = hand
-        #         break
-        
-        
-        # Asks the user to input 'n' or 'r' or 'e'.
+        # 1) Asks the user to input 'n' or 'r' or 'e'.
         print('Enter n to deal a new hand, r to replay the last hand, or e to end game: ', end='')
         x = input()
                 
@@ -198,61 +141,57 @@ def playGame(wordList):
             break
         
         # If the user inputs anything that's not 'n', 'r', or 'e', keep asking them again.
-        if (x != 'n') and (x != 'r') and (x != 'e'):
+        elif (x != 'n') and (x != 'r') and (x != 'e'):
             print('Invalid command.\n')
+        
+        # If the user inputs 'r', ask again.
+        elif (x == 'r') and (count_games == 0):
+            print('You have not played a hand yet. Please play a new hand first!\n')
             
-        while True:
+        else:
             
-            # If the user inputs 'r', ask again.
-            while x == 'r':
-                print('You have not played a hand yet. Please play a new hand first!\n')
-                print('Enter n to deal a new hand, r to replay the last hand, or e to end game: ', end='')
-                x = input()
-                
-            # Asks the user to input a 'u' or a 'c'.
-            print()
-            print('Enter u to have yourself play, c to have the computer play: ', end='')
-            y = input()
-            
-            # If the user inputs anything that's not 'c' or 'u', keep asking them again.
-            if (y != 'u') and (y != 'c'):
-                print('Invalid command.\n')
-                continue
-                
-            # If the user inputted 'n', play a new (random) hand.
-            if x == 'n':
-                count_games += 1
-                hand = dealHand(HAND_SIZE)
-                
-                #If the user inputted 'u', let the user play the game
-                if y == 'u':
-                    playHand(hand, wordList, HAND_SIZE)
-
+            while True:
                     
-                elif y == 'c':
-                    compPlayHand(hand, wordList, HAND_SIZE)
+                # 2) Asks the user to input a 'u' or a 'c'.
+                print('Enter u to have yourself play, c to have the computer play: ', end='')
+                y = input()
+                
+                # If the user inputs anything that's not 'c' or 'u', keep asking them again.
+                if (y != 'u') and (y != 'c'):
+                    print('Invalid command.\n')
+                    # continue
                     
-                hand_previous = hand
-            
-            # If the user inputted 'r', play the last hand again.
-            elif x == 'r':
-                if count_games > 0:
-                    hand = hand_previous
+                # If the user inputted 'n', play a new (random) hand.
+                if x == 'n':
+                    count_games += 1
+                    hand = dealHand(HAND_SIZE)
+                    
+                    # If the user inputted 'u', let the user play the game
                     if y == 'u':
                         playHand(hand, wordList, HAND_SIZE)
-                        
+                        hand_previous = hand
+                        break
+                    
+                    # If the user inputted 'c', let the computer play
                     elif y == 'c':
                         compPlayHand(hand, wordList, HAND_SIZE)
-                        
-                    playHand(hand, wordList, HAND_SIZE)
-                    hand_previous = hand
+                        hand_previous = hand
+                        break
+                
+                # if the user inputted 'r', play the last hand again.
+                if (x == 'r') and (count_games > 0):
                     
-                else:
-                    print('You have not played a hand yet. Please play a new hand first!\n')
-            
-    
-    
-        
+                    # If the user inputted 'u', let the user play the game
+                    if y == 'u':
+                        playHand(hand_previous, wordList, HAND_SIZE)
+                        hand_previous = hand
+                        break
+                    
+                    # If the user inputted 'c', let the computer play
+                    elif y == 'c':
+                        compPlayHand(hand_previous, wordList, HAND_SIZE)
+                        hand_previous = hand
+                        break
 
         
 #
